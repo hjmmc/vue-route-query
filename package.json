@@ -1,0 +1,39 @@
+{
+  "name": "vue-route-query",
+  "version": "0.0.1",
+  "description": "自动更新路由参数的 Vue 指令, v-rq directive for automatically modifying router query",
+  "main": "dist/vue-route-query.js",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "directive",
+    "route-query",
+    "vue-route-query",
+    "v-rq"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "format": "prettier -w src/*"
+  },
+  "author": "hjmmc <haojie.liu@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-object-assign": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "prettier": "^2.4.1",
+    "rollup": "^2.4.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "printWidth": 120
+  }
+}
