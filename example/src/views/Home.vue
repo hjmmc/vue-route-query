@@ -1,41 +1,3 @@
-# vue-route-query
-自动更新路由参数的 Vue 指令, v-rq directive for automatically modifying router query  
-
-# Installing
-
-Using npm:  
-
-```bash 
-npm install --save vue-route-query
-```
-
-
-Using yarn:  
-
-```bash
-yarn add vue-route-query
-```
-
-# Usage
-
-Use directive:  
-
-```js
-// use directive
-import VueRouteQuery from 'vue-route-query'
-Vue.use(VueRouteQuery)
-```
-
-* 默认用法：`<div v-rq="query.page" /> `根据传入的值支持自动转换为 string,number,boolean 不支持其它类型，可通过修饰符修改值类型
-* 多个参数：`<div v-rq:page="query.page" v-rq:size="query.size">`
-* 修饰符 replace: `<div v-rq:page.replace="query.page" />` replace 路由而不是 push
-* 修饰符 number: `<div v-rq:page.number="query.page" />` 指定数据类型为 number
-* 修饰符 boolean: `<div v-rq:enable.boolean="query.enable" />` 指定数据类型为 boolean
-
-
-Example:
-
-```vue
 <template>
   <div style="padding: 50px">
     <el-pagination
@@ -98,4 +60,3 @@ export default {
   },
 }
 </script>
-```
