@@ -1,6 +1,6 @@
 {
   "name": "vue-route-query",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "自动更新路由参数的 Vue 指令, v-rq directive for automatically modifying router query",
   "main": "dist/vue-route-query.js",
   "keywords": [
