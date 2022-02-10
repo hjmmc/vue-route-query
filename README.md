@@ -31,6 +31,7 @@ Vue.use(VueRouteQuery)
 * 修饰符 replace: `<div v-rq:page.replace="query.page" />` replace 路由而不是 push
 * 修饰符 number: `<div v-rq:page.number="query.page" />` 指定数据类型为 number
 * 修饰符 boolean: `<div v-rq:enable.boolean="query.enable" />` 指定数据类型为 boolean
+* 修饰符 popstate: `<div v-rq.popstate="getData" />` 处理浏览器后退事件
 
 
 Example:
@@ -41,6 +42,7 @@ Example:
     <el-pagination
       v-rq="page"
       v-rq:size.replace="pageSize"
+      v-rq.popstate="getData"
       :current-page.sync="page"
       :page-size.sync="pageSize"
       :page-sizes="[10, 20, 50, 100]"
