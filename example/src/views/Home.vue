@@ -3,6 +3,7 @@
     <el-pagination
       v-rq="page"
       v-rq:size.replace="pageSize"
+      v-rq.popstate="getData"
       :current-page.sync="page"
       :page-size.sync="pageSize"
       :page-sizes="[10, 20, 50, 100]"

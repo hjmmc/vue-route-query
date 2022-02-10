@@ -63,4 +63,4 @@ const isSupportPopState = !!window.history.pushState
       isSupportPopState && window.removeEventListener('popstate', binding.value)
     }
   }
-})
+}
