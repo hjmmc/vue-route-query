@@ -1,14 +1,15 @@
 /**
  * 根据路由值设置 VNode data
  * @param routeValue
+ * @param defaultRouteValue
  * @param binding
  * @param vNode
  */
-function setVNodeData(routeValue, binding, vNode) {
-  if (!routeValue) return
-  if (binding.modifiers.number || typeof binding.value === 'number') {
-    routeValue = ~~routeValue
-  } else if (binding.modifiers.boolean || typeof binding.value === 'boolean') {
+function setVNodeData (routeValue, defaultRouteValue, binding, vNode) {
+  if (routeValue === undefined) routeValue = defaultRouteValue // 当值为 undefined 时使用默认值
+  if (binding.modifiers.number || typeof defaultRouteValue === 'number') {
+    routeValue = routeValue === undefined || routeValue === '' ? undefined : ~~routeValue
+  } else if (binding.modifiers.boolean || typeof defaultRouteValue === 'boolean') {
     routeValue = routeValue === 'true'
   }
   const keys = binding.expression.split('.')
